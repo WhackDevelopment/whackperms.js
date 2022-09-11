@@ -1,0 +1,9 @@
+# Editor
+.vscode/*
+.idea
+.DS_Store
+
+.cached
+.env
+
+

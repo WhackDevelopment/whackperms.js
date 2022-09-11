@@ -1,0 +1,49 @@
+{
+    "type": "module",
+    "name": "whackperms.js",
+    "version": "0.0.0",
+    "developmentVersion": "0.0.1",
+    "description": "Group/User Based PermissionSystem for every type of project",
+    "main": "./dist/whackperms.js",
+    "scripts": {
+        "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+        "test:watch": "node --experimental-vm-modules node_modules/jest/bin/jest.js --watch",
+        "prettierAll": "prettier --write .",
+        "format": "prettier --write \"src/**/*.js\"",
+        "licenseCheck": "license-check-and-add check -f ./licenseConfig.json",
+        "license": "license-check-and-add add -f ./licenseConfig.json",
+        "build:perm": "esbuild ./src/index.js --format=esm --bundle --outfile=./dist/whackperms.js --platform=node --target=node16.3",
+        "build:min": "esbuild ./src/index.js --format=esm --bundle --outfile=./dist/whackperms.min.js --sourcemap --target=chrome58,firefox57,safari11,edge16 --minify",
+        "build": "npm run build:perm && npm run build:min"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/WhackDevelopment/whackperms.js.git"
+    },
+    "keywords": [
+        "permission",
+        "permissions",
+        "permission system",
+        "groups",
+        "users",
+        "user",
+        "group"
+    ],
+    "author": "WhackDevelopment",
+    "license": "GPL-3.0",
+    "bugs": {
+        "url": "https://github.com/WhackDevelopment/whackperms.js/issues"
+    },
+    "homepage": "https://github.com/WhackDevelopment/whackperms.js#readme",
+    "devDependencies": {
+        "esbuild": "^0.15.7",
+        "eslint": "^8.23.0",
+        "eslint-config-prettier": "^8.5.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "jest": "^29.0.3",
+        "jest-cli": "^29.0.3",
+        "license-check-and-add": "^4.0.5",
+        "prettier": "^2.7.1",
+        "uuid": "^9.0.0"
+    }
+}
