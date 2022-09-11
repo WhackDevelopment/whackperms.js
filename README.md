@@ -17,13 +17,13 @@
 #### module
 
 ```js
-import * as perms from 'whackperms.js';
+import WhackPerms from 'whackperms.js';
 ```
 
 #### nodejs
 
 ```js
-const perms = require('whackperms.js');
+const WhackPerms = require('whackperms.js');
 ```
 
 #### website
